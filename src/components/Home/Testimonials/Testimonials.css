@@ -1,0 +1,15 @@
+.testimonials .container{
+    background-image: url('../../../images/quote.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 150px;
+}
+.testimonials .card-deck{
+    border-color: transparent;
+    margin: 5px;
+}
+
+.testimonials .card-deck .card-footer{
+    background: transparent;
+    border: 0;
+}
