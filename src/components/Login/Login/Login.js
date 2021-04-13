@@ -5,6 +5,7 @@ import firebaseConfig from './firebase.config';
 import { useHistory, useLocation } from 'react-router';
 import { UserContext } from '../../../App';
 import LoginBg from '../../../images/loginBg.png'
+import NavBar from '../../Shared/NavBar/NavBar';
 
 if (!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig)
@@ -50,7 +51,9 @@ const Login = () => {
 
 
     return (
+
         <div className="login-page container">
+            <NavBar></NavBar>
             <div className="row align-items-center" style={{ height: "100vh" }}>
                 <div className="col-md-6 shadow p-5">
                     <div className="form-group">
