@@ -10,6 +10,18 @@ const Sidebar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [isDoctor, setIsDoctor] = useState(false);
 
+    useEffect(() => {
+        fetch('http://localhost:4000/isDoctor', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({ email: loggedInUser.email })
+        })
+            .then(resp => resp.json())
+            .then(data => setIsDoctor(data))
+    }, [])
+
 
     return (
         <div className="sidebar d-flex flex-column justify-content-between col-md-2 py-5 px-4" style={{ height: "100vh" }}>
