@@ -22,7 +22,7 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:4000/getAppointmentsByDate', {
+        fetch('https://salty-woodland-63344.herokuapp.com/getAppointmentsByDate', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
